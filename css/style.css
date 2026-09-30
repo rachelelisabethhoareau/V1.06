@@ -1,0 +1,324 @@
+
+@font-face {
+    font-family: 'Raleway';
+    src: url("../font/Raleway/Raleway-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url("../font/Raleway/Raleway-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'LoveNature';
+    src: url("../font/love_nature/Love\ Nature.ttf") format("truetype");
+    font-style: normal;
+}
+
+
+/* mettre à zéro les conteneurs */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+
+
+body {
+    background-color: #F0FFF1;
+    font-family: "Raleway", Arial, sans-serif;
+    text-align: justify;
+    
+}
+
+/* Header */
+
+
+body > header{
+    background-color: #4a3725; 
+    color: white;
+    padding: 10px 40px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+body > header ul {
+    display: flex;
+    gap: 30px;
+    list-style-type: none; /* enlève le style "liste à puce" */
+    margin: 0;
+    padding: 0; 
+
+}
+
+.titre-du-site {
+    font-family: 'LoveNature', system-ui; /* Font du "logo" du site */
+    font-size: 28px;
+    margin: 0; 
+}
+
+body > header a{
+    color: white; 
+    text-decoration: none; /* enlève le style par défaut des liens */
+}
+
+
+/* Main */
+
+
+/* Accueil : pas de bloc blanc, on laisse le fond vert du body apparaître */
+.conteneur {
+    background-color: transparent;
+}
+
+main {
+    max-width: 1000px; /*contenu de la page ne dépassera pas 1000 px de large*/
+    margin: 0 auto; /*pas de marge en haut ni en bas ; marges gauches et droites se partagent l'espace restant donc centre bloc*/
+    padding: 50px 20px;  /*ajout un peu de marges intérieures */
+    background-color: white;
+}
+
+/* Hero : le texte d'introduction à gauche, une image à droite */
+.introduction {
+    display: flex;
+    align-items: center; /* texte et image centrés verticalement */
+    flex-wrap: wrap; /* sur petit écran, l'image passe sous le texte */
+    gap: 40px;
+    margin-bottom: 2rem; /* espace avant la grille d'articles */
+}
+
+.texte-introduction {
+    flex: 1; /* le texte prend l'espace restant */
+    min-width: 250px; /* évite une colonne de texte trop étroite */
+}
+
+.introduction img {
+    width: 40%; /* l'image prend un peu moins de la moitié de la largeur */
+    height: 200px; /* hauteur fixe, quelle que soit la forme de l'image */
+    object-fit: cover; /* l'image remplit le cadre sans être déformée */
+    border-radius: 12px; /* mêmes coins arrondis que les cartes articles */
+}
+
+#titre-introduction {
+    color:#0D2818;
+    font-style: normal;
+    font-weight: 900;
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 44px;
+
+}
+
+.introduction p{
+    text-align: left;
+    line-height: 1.6;
+    text-wrap: balance;
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* Articles */
+
+.articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.titre-section {
+    color:#0D2818;
+    margin: 2rem 0 1.5rem; /*2rem=haut ; 0=gauche+droite ; 1.5rem=bas*/
+    grid-column: 1 / -1; /*Titre s'étire de la 1ère à la dernière ligne*/
+}
+
+.carte-article {
+    background-color: #E8FCCF;
+    border-radius: 12px;
+    overflow: hidden; /*Dépassement du coin de l'image est masqué*/
+}
+
+.carte-article img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.contenu-article {
+    padding: 1.5rem;
+}
+
+.date-article {
+    font-style: italic;
+    font-weight: 200;
+    margin-bottom: 0.5rem;
+}
+
+.contenu-article h3 {
+    color:#0D2818;
+    margin-bottom: 0.75rem;
+}
+
+.contenu-article p {
+    line-height: 1.6;
+    text-align: left justify;
+}
+
+/* Connexion */
+
+.connexion {
+    max-width: 400px;        /* une colonne étroite */
+    margin: 40px auto;       /* centrée, avec de l'air au-dessus */
+    padding: 80px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.page-connexion {
+    background-color: transparent; /* pas de bloc blanc, on laisse le vert du body apparaître */
+}
+
+.connexion input {
+    display: block;          /* chaque champ passe sous son label */
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+}
+
+.connexion button {
+    width: 100%;
+    padding: 10px;
+    background-color: #E8FCCF; /* le vert clair des cartes articles */
+    color: black;
+    border: none;
+    border-radius: 8px;
+}
+
+/* A propos */
+
+     .mentions {
+         max-width: 700px;
+         margin: 0 auto;
+         
+     }
+
+     .mentions h2 {
+        margin: 2rem 0 0.75rem;  /* 32px au-dessus, 12px en dessous */
+         color: #0D2818;
+     }
+
+        .mentions p {
+         margin-bottom: 1rem;     /* espace entre les paragraphes */
+         line-height: 1.6;
+     }
+
+
+
+/* Newsletter */
+
+.newsletter {
+    background-color: #4a3725; /* même marron que le header */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.newsletter h2 {
+    margin-bottom: 10px; /* espace sous le titre */
+}
+
+.newsletter p {
+    margin-bottom: 20px; /* espace sous la phrase d'accroche */
+}
+
+/* Le champ + le bouton, côte à côte et centrés */
+.formulaire-newsletter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* sur petit écran, le bouton passe sous le champ */
+}
+
+.formulaire-newsletter input {
+    width: 280px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px; /* mêmes coins arrondis que le bouton de connexion */
+}
+
+.formulaire-newsletter button {
+    padding: 10px 20px;
+    background-color: #F0FFF1; 
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer; /* curseur "main" au survol du bouton */
+}
+
+
+/* Footer */
+
+
+footer {
+    background-color: #2e2e2e; 
+    color: white;
+    text-align: center;  /* le nom du site et le copyright centrés */
+    padding: 30px; 
+}
+
+footer a {
+    color: white;
+    text-decoration: none; /* enleve le soulignement par defaut des liens */
+}
+
+.nom-site-footer {
+    font-family: 'LoveNature', system-ui;
+    font-size: 32px;
+    margin-bottom: 30px; /* espace entre le nom et les colonnes */
+}
+
+.colonnes-footer {
+    max-width: 1000px; 
+    margin: 0 auto; /* centre le bloc de colonnes dans le footer */
+    display: flex; /* met les colonnes à l'horizontal */
+    justify-content: space-between; /* répartit l'espace vide entre les colonnes */
+    gap: 40px;
+    flex-wrap: wrap; /* sur petit écran les colonnes passent à la ligne */
+}
+
+.colonne-footer{
+    text-align: left;
+}
+
+.colonne-footer ul {
+    list-style-type: none; /* enlève les puces */
+}
+
+.colonne-footer li {
+    margin-bottom: 8px; /* espace entre les liens */
+}
+.colonne-footer h3 {
+    margin-bottom: 15px;
+    color: #F0FFF1;
+}
+
+.logo-social {
+    width: 16px;
+    margin-right: 8px;
+    vertical-align: middle; /* aligne l'icône avec le texte */
+}
+
+.copyright-footer {
+    margin-top: 30px;
+}
